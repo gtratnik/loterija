@@ -1,0 +1,8 @@
+<div class="well">
+<h2>Loterija</h2>
+      <div class="well" ng-show="arr.length!=0">
+        <h4>Izračunane številke</h4>
+        <div ng-repeat="item in arr"><b>{{item.number}}</b> v {{(item.calculateTime / 1000) | number:3}}s</div>
+      </div>
+      <button class="btn btn-primary" ng-click="zazeni()" ng-disabled="calculating && arr.length!=3">Izžrebaj!</button>
+</div>
